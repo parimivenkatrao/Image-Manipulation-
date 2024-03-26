@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .registration-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .registration-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .registration-container input[type="text"],
+        .registration-container input[type="email"],
+        .registration-container input[type="tel"],
+        .registration-container input[type="password"],
+        .registration-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .registration-container textarea {
+            resize: vertical;
+        }
+        .registration-container input[type="submit"]{
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1265b7;
+            color:white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .registration-container input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #b71212;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .registration-container input[type="submit"]:hover,
+        .registration-container input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        .registration-container .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>User Registration</h2>
+        <form method="POST">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone_number" placeholder="Phone Number" required>
+            <textarea name="address" placeholder="address" required></textarea>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="button-group">
+                <input type="submit" value="register">
+                <input type="reset" value="clear" onclick="alert('are you clear you datails....!')">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
